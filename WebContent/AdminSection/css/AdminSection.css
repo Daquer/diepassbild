@@ -1,0 +1,37 @@
+@CHARSET "ISO-8859-1";
+
+@font-face {
+	font-family: 'Letter Gothic Std Medium';
+	src: url('../../css/fonts/LetterGothicStd.otf') format("opentype");
+}
+
+@font-face {
+	font-family: 'Prestige Elite Std';
+	src: url('../../css/fonts/PrestigeEliteStd-Bd.otf') format("opentype");
+}
+
+form>div {
+	margin: 10px;
+}
+
+input {
+	font-family: 'Prestige Elite Std';
+}
+
+
+
+span {
+	font-family: 'Prestige Elite Std';
+}
+
+div.subtitle.admin {
+	max-width: 100%;
+	width: 100%;
+	position: relative;
+	height: 100%;
+	display: inline;
+/* 	max-height: 1.1em; */
+/* 	margin-top: 0.5em; */
+/* 	transform: translateX(50px); */
+
+}
