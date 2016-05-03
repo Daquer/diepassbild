@@ -40,20 +40,18 @@ $(window).load(	function() {
 	
 		function setFirstArt() {
 //			jQuery.ajax({
-//				url : '/RetrieveImgList',
-//				data: { path: "Inicio"} ,
+//				url : 'RetrieveImgList',
 //				success : function(result) {
 //					imgList = result;
 //				},
 //				async : false
 //			});
-			
-			imgList = "1.jpg;2.png";
+			var imgList = "1.jpg;2.jpg";
 			if (imgList != undefined) {
 				imgList = imgList.split(";");
 				for (var i = 0; i < imgList.length; i++) {
 					
-					$("<img class='mainArts' src='/images/main/" + imgList[i] + "'" + ( i>0 ? " style='display:none;'":"" )+ "/>").appendTo(".mainImage");
+					$("<img class='mainArts' src='images/main/" + imgList[i] + "'" + ( i>0 ? " style='display:none;'":"" )+ "/>").appendTo(".mainImage");
 				}
 			}
 		}

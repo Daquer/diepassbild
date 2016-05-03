@@ -16,9 +16,6 @@ function chamarImagemReferente(elem) {
 	centerImage($(".looper-inner>div:nth-child(" + nthChild + ")>img")[0]);
 	
 	$(".looper-inner>div:nth-child(" + nthChild + ")").addClass('active');
-
-	//permite a troca de fotos através de seta.
-	$("#controlLooper").focus();
 	
 }
 
@@ -38,7 +35,7 @@ $(document).ready(function() {
 	$(".projetobox").justifiedGallery({
 		rowHeight : 250,
 	    lastRow : 'nojustify',
-	    margins : 25
+	    margins : 7.7
 	});
 	
 	var clickedRight = false;
@@ -52,9 +49,19 @@ $(document).ready(function() {
 		clickedLeft = true;
 	});
 	
-	//Possibilita a saída da visualização de fotos através do ESC
+	//Possibilita a troca de fotos através das setas e a saída através do ESC
 	$(window).on("keydown", function(event) {
 		if($('#black_overlay').css("display") == "block") {
+			
+			//right arrow
+			if(event.keyCode == '39' & clickedRight == false) {
+				$('.looper').looper('next');
+			}
+			
+			//left arrow
+			if(event.keyCode == '37' & clickedLeft == false) {
+				$('.looper').looper('prev');
+			}
 			
 			//Esc
 			if(event.keyCode == '27') {

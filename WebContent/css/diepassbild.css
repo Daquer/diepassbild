@@ -175,6 +175,11 @@ div.credits {
 	cursor: pointer;
 }
 
+.link:hover {
+	color: rgb(176,104,200);
+	cursor: pointer;
+}
+
 .logo_canto {
 	z-index: 5;
 	position: absolute;

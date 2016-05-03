@@ -1,64 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" id="WebApp_ID" version="2.4">
-  <display-name>diepassbild</display-name>
-  <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-  </welcome-file-list>
-  <servlet>
-    <servlet-name>RetrieveProjectList</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.RetrieveProjectList</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RetrieveProjectList</servlet-name>
-    <url-pattern>/RetrieveProjectList</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>RetrieveProjectPhotos</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.RetrieveProjectPhotos</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RetrieveProjectPhotos</servlet-name>
-    <url-pattern>/Projeto</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>SendEmail</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.SendEmail</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>SendEmail</servlet-name>
-    <url-pattern>/SendEmail</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>Uploads</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.Uploads</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>Uploads</servlet-name>
-    <url-pattern>/uploads/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>NewProject</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.NewProject</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>NewProject</servlet-name>
-    <url-pattern>/NewProject/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <servlet-name>DeleteDirectory</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.DeleteDirectory</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>DeleteDirectory</servlet-name>
-    <url-pattern>/DeleteDirectory</url-pattern>
-  </servlet-mapping>
-    <servlet>
-    <servlet-name>RenameProject</servlet-name>
-    <servlet-class>br.com.diepassbild.servlet.util.RenameProject</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>RenameProject</servlet-name>
-    <url-pattern>/RenameProject</url-pattern>
-  </servlet-mapping>
-  
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	id="WebApp_ID" version="2.4">
+	<display-name>diepassbild</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+<!-- 	<filter> -->
+<!-- 		<description> -->
+<!-- 		</description> -->
+<!-- 		<display-name>ProjetosFilter</display-name> -->
+<!-- 		<filter-name>ProjetosFilter</filter-name> -->
+<!-- 		<filter-class>br.com.diepassbild.servlet.util.ProjetosFilter</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>ProjetosFilter</filter-name> -->
+<!-- 		<url-pattern>/*</url-pattern> -->
+<!-- 	</filter-mapping> -->
+	<servlet>
+		<servlet-name>RetrieveImgList</servlet-name>
+		<servlet-class>br.com.diepassbild.servlet.util.RetrieveImgList</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RetrieveImgList</servlet-name>
+		<url-pattern>/utils/admin/RetrieveImgList</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>SendEmail</servlet-name>
+		<servlet-class>br.com.diepassbild.servlet.util.SendEmail</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SendEmail</servlet-name>
+		<url-pattern>/utils/admin/SendEmail</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>UploadTest</servlet-name>
+		<servlet-class>br.com.diepassbild.servlet.util.UploadTest</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UploadTest</servlet-name>
+		<url-pattern>/utils/admin/uploads/*</url-pattern>
+<!-- 		<url-pattern>/UploadTest</url-pattern> -->
+	</servlet-mapping>
+<!-- 	<servlet> -->
+<!-- 		<description> -->
+<!-- 		</description> -->
+<!-- 		<display-name>Projetos</display-name> -->
+<!-- 		<servlet-name>Projetos</servlet-name> -->
+<!-- 		<servlet-class>br.com.diepassbild.servlet.util.Projetos</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Projetos</servlet-name> -->
+<!-- 		<url-pattern>/</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+	
+	
 </web-app>
